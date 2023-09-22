@@ -1,8 +1,7 @@
 # PojavLauncher-非官方汉化更新
 <img src="https://github.com/HopiHopy/PojavZH/blob/v3_openjdk/PojavZH.png" align="right" width="264" height="264" alt="PojavZH logo">
 
-[![Actions](https://github.com/HopiHopy/PojavZH/workflows/Android%20CI/badge.svg)](https://github.com/HopiHopy/PojavZH/actions)
-
+[![Android CI](https://github.com/HopiHopy/PojavZH/actions/workflows/android.yml/badge.svg)](https://github.com/HopiHopy/PojavZH/actions/workflows/android.yml)
 ## 说明
 * **您好！欢迎来到PojavLauncher非官方汉化更新的分支！在这里，您能够获取到完全汉化后的PojavLauncher！**  
 * **支持简体中文与繁體中文**（可能不算標準，如果您認為質量有問題，還請在[B站](https://space.bilibili.com/2008204513)私信告訴我哦）  

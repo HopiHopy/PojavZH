@@ -69,5 +69,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
-          name: Pojav汉化更新
+          name: Pojav汉化更新-独立软件
           path: out/app-debug.*

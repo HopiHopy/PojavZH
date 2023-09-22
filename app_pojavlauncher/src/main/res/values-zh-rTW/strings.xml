@@ -2,7 +2,7 @@
 <resources>
     <!-- App name part -->
     <string name="app_name">PojavLauncher(漢化更新-中文繁體)</string>
-    <string name="app_short_name">PojavLauncher</string>
+    <string name="app_short_name">Pojav ZH</string>
     <string name="app_motd">在您的設備上啟動《Minecraft：Java版》！</string>
     <!-- Pojav ZH -->
     <string name="zh_microsoft_ccount">微軟賬號</string>

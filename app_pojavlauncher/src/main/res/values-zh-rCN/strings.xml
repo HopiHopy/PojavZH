@@ -302,7 +302,7 @@
     <string name="modpack_install_notification_data_not_available">模组加载器信息下载失败</string>
     <string name="modpack_install_modloader_download_failed">模组加载器文件下载失败</string>
     <string name="modpack_install_download_failed">整合包文件下载失败</string>
-    <string name="modpack_install_button">创建整合包配置文件</string>
+    <string name="modpack_install_button">创建整合包配置</string>
     <string name="notif_error_occured">错误</string>
     <string name="notif_error_occured_desc">点击查看详细信息</string>
     <string name="fabric_dl_only_stable">仅显示稳定版本</string>

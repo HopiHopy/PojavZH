@@ -21,7 +21,7 @@
     <string name="zh_failed_to_save_layout">Failed to save the layout at:</string>
     <string name="zh_load_failed">Failed to load</string>
     <string name="zh_microsoft_login_fragment">Login started !</string>
-    <string name="zh_first_start">\nSorry, PojavZH is only applicable to players who use PojavLauncher in China.\nI just modified the language file to make it easy for more Chinese players to understand.\nThe other content is the same as the version of PojavLauncherTeam.\nSo you don\u0027t need to use PojavZH at all</string>
+    <string name="zh_first_start">Sorry, PojavZH is only applicable to players who use PojavLauncher in China.\nI just modified the language file to make it easy for more Chinese players to understand.\nThe other content is the same as the version of PojavLauncherTeam.\nSo you don\u0027t need to use PojavZH at all</string>
     <string name="zh_first_start_button1">Contact Me</string>
     <string name="zh_first_start_button2">OK</string>
 

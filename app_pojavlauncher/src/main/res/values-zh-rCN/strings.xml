@@ -19,7 +19,7 @@
     <string name="zh_failed_to_save_layout">无法在以下位置保存控制布局：</string>
     <string name="zh_load_failed">加载失败</string>
     <string name="zh_microsoft_login_fragment">开始登陆！</string>
-    <string name="zh_first_start">\n感谢您使用《PojavLauncher》非官方完全汉化版：《Pojav ZH》！\n软件作者：（B站）墨北Hopy。\n\n本软件对语言部分进行了修改，其他内容尽可能与官方版本保持一致。\n如果您在使用过程中遇到了问题，请在B站私信我哦！\n（https://space.bilibili.com/2008204513）</string>
+    <string name="zh_first_start">感谢您使用《PojavLauncher》非官方完全汉化版：《Pojav ZH》！\n软件作者：（B站）墨北Hopy。\n\n本软件对语言部分进行了修改，其他内容尽可能与官方版本保持一致。\n如果您在使用过程中遇到了问题，请在B站私信我哦！\n（https://space.bilibili.com/2008204513）</string>
     <string name="zh_first_start_button1">访问作者B站主页</string>
     <string name="zh_first_start_button2">不再提示</string>
     <!-- Login strings -->
@@ -198,7 +198,7 @@
     <string name="preference_gyro_invert_y_axis">反转 Y 轴</string>
     <string name="preference_gyro_invert_x_axis_description">反转水平轴</string>
     <string name="preference_gyro_invert_y_axis_description">反转垂直轴</string>
-    <string name="preference_gyro_smoothing_title">启用陀螺仪平滑</string>
+    <string name="preference_gyro_smoothing_title">启用平滑陀螺仪</string>
     <string name="preference_gyro_smoothing_description">通过减少抖动以换取延迟</string>
     <string name="preference_back_title">返回到上一个屏幕</string>
     <string name="unnamed">未命名</string>

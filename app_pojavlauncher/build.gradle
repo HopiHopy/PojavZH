@@ -6,7 +6,9 @@ static def getDate() { return new Date().format('yyyyMMdd') }
 
 static def getDateSeconds() {
     if (System.getenv("GITHUB_ACTIONS") == "true") {
-        return 9999999
+        return 9934841 + Integer.parseInt(System.getenv("GITHUB_RUN_NUMBER"))
+    } else {
+        return 172005
     }
 }
 
@@ -121,14 +123,14 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix '.CN.debug'
+            applicationIdSuffix '.debug'
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.customDebug
-            resValue 'string', 'application_package', 'net.kdt.pojavlaunch.CN.debug'
-            resValue 'string', 'storageProviderAuthorities', 'net.kdt.pojavlaunch.scoped.gamefolder.CN.debug'
-            resValue 'string', 'shareProviderAuthority', 'net.kdt.pojavlaunch.scoped.controlfolder.CN.debug'
+            resValue 'string', 'application_package', 'net.kdt.pojavlaunch.debug'
+            resValue 'string', 'storageProviderAuthorities', 'net.kdt.pojavlaunch.scoped.gamefolder.debug'
+            resValue 'string', 'shareProviderAuthority', 'net.kdt.pojavlaunch.scoped.controlfolder.debug'
         }
         proguard {
             initWith debug

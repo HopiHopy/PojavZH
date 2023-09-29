@@ -68,7 +68,7 @@ public class ControlData {
     private float height;        //Dp instead of Px now
 
     public ControlData() {
-        this("按键");
+        this("button");
     }
 
     public ControlData(String name) {

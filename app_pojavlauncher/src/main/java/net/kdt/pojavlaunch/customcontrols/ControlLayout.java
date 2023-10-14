@@ -77,7 +77,7 @@ public class ControlLayout extends FrameLayout {
 			return;
 		}
 
-		throw new IOException(getResources().getString(R.string.zh_unsupported_layout_version));
+		throw new IOException("Unsupported control layout version");
 	}
 
 	public void loadLayout(CustomControls controlLayout) {
@@ -204,7 +204,15 @@ public class ControlLayout extends FrameLayout {
 	}
 
 	private void addJoystickView(ControlJoystickData data){
-		addView(new ControlJoystick(this, data));
+		ControlJoystick view = new ControlJoystick(this, data);
+
+		if (!mModifiable) {
+			view.setAlpha(view.getProperties().opacity);
+			view.setFocusable(false);
+			view.setFocusableInTouchMode(false);
+		}
+		addView(view);
+
 	}
 
 

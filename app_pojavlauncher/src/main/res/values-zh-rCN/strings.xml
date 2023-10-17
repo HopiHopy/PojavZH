@@ -302,6 +302,20 @@
     <string name="notif_error_occured">错误</string>
     <string name="notif_error_occured_desc">点击查看详细信息</string>
     <string name="fabric_dl_only_stable">仅显示稳定版本</string>
+    <string name="dl_tampered_manifest_title">文件校验警告</string>
+    <string name="dl_tampered_manifest"><![CDATA[镜像源上的游戏版本列表与Mojang官方版本列表并不一致，这意味着它可能被篡改了<br/>
+        <b>这样做并不安全。如果您继续，您的个人信息可能面临风险！</b><br/>
+        如果您仍想继续使用镜像源, 点击 \"关闭游戏版本列表检查\" 再次开始下载<br/>
+        如果您想使用官方下载源, 点击 \"切换到官方下载源\" 再次开始下载<br/>]]>
+    </string>
+    <string name="dl_turn_off_manifest_checks">关闭游戏版本列表检查</string>
+    <string name="dl_switch_to_official_site">切换到官方下载源</string>
+    <string name="preference_download_source_title">游戏下载源</string>
+    <string name="preference_download_source_description">选择镜像下载源，而不是使用官方下载源</string>
+    <string name="preference_verify_manifest_title">游戏版本列表检查</string>
+    <string name="preference_verify_manifest_description">启用后，启动器将检查游戏版本列表以及库</string>
+    <string name="notif_download_finished">游戏已经准备好启动了</string>
+    <string name="notif_download_finished_desc">点击这里启动它！</string>
     <string name="preference_category_gestures">手势</string>
     <string name="preference_category_buttons">控制键</string>
     <string name="preference_category_experimental_settings">实验性的补丁</string>

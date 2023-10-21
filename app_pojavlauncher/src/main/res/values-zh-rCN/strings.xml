@@ -323,4 +323,9 @@
     <string name="preference_category_main_categories">设置</string>
     <string name="preference_category_miscellaneous">其他设置</string>
     <string name="preference_category_video">视频设置</string>
+    <string name="notification_permission_dialog_title">权限请求</string>
+    <string name="notification_permission_dialog_text">PojavLauncher需要发布通知的权限，以防止您离开应用程序时，停止 游戏/整合包 的下载。如果没有此权限，当您将PojavLauncher置于后台时，安卓系统可能会停止您的下载进度</string>
+    <string name="notification_permission_toast">您可以随时通过进入“系统设置”改变您的主意</string>
+    <string name="preference_ask_for_notification_title">允许通知</string>
+    <string name="preference_ask_for_notification_description">单击可重新请求通知权限，这是 游戏/整合包 在后台正常下载所必需的</string>
 </resources>

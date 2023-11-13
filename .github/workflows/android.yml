@@ -118,5 +118,4 @@ jobs:
         with:
 
           name: Pojav汉化更新-独立软件
-
-          path: app_pojavlauncher/build/outputs/apk/debug/*
+          path: out/app-debug.*

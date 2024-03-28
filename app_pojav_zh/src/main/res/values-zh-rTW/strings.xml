@@ -42,6 +42,8 @@
     <string name="zh_file_refresh">重新整理</string>
     <string name="zh_file_share">分享</string>
     <string name="zh_file_share_message">你確定要分享此檔案嗎？</string>
+    <string name="zh_file_select_file_tip">選擇檔案</string>
+    <string name="zh_file_select_file_message">您確定要選擇此檔案嗎？</string>
     <string name="zh_file_open">打開</string>
     <string name="zh_neoforge_dl_searching">正在搜尋 NeoForge 版本號</string>
     <string name="zh_neoforge_dl_no_installer">很抱歉，該版本的 NeoForge 沒有安裝程式，尚不支援</string>

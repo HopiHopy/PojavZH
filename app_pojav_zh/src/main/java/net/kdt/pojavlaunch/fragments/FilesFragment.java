@@ -2,10 +2,13 @@ package net.kdt.pojavlaunch.fragments;
 
 import static net.kdt.pojavlaunch.PojavZHTools.calculateBufferSize;
 import static net.kdt.pojavlaunch.PojavZHTools.deleteFileListener;
+import static net.kdt.pojavlaunch.PojavZHTools.getGameDirPath;
 import static net.kdt.pojavlaunch.PojavZHTools.renameFileListener;
 import static net.kdt.pojavlaunch.PojavZHTools.shareFile;
 import static net.kdt.pojavlaunch.Tools.DIR_GAME_HOME;
 import static net.kdt.pojavlaunch.Tools.getFileName;
+import static net.kdt.pojavlaunch.fragments.SelectFileFragment.BUNDLE_DEFAULT_PATH;
+import static net.kdt.pojavlaunch.prefs.LauncherPreferences.DEFAULT_PREF;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -13,14 +16,15 @@ import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -30,7 +34,9 @@ import com.kdt.pickafile.FileSelectedListener;
 
 import net.kdt.pojavlaunch.PojavZHTools;
 import net.kdt.pojavlaunch.R;
-import net.kdt.pojavlaunch.contracts.OpenDocumentWithExtension;
+import net.kdt.pojavlaunch.Tools;
+import net.kdt.pojavlaunch.extra.ExtraConstants;
+import net.kdt.pojavlaunch.extra.ExtraCore;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -42,7 +48,6 @@ import java.util.Objects;
 public class FilesFragment extends Fragment {
     public static final String TAG = "FilesFragment";
     public static final String BUNDLE_PATH = "bundle_path";
-    private ActivityResultLauncher<Object> openDocumentLauncher;
     private Button mReturnButton, mAddFileButton, mCreateFolderButton, mRefreshButton;
     private ImageButton mHelpButton;
     private FileListView mFileListView;
@@ -56,16 +61,18 @@ public class FilesFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        openDocumentLauncher = registerForActivityResult(
-                new OpenDocumentWithExtension(null),
-                result -> {
-                    if (result != null) {
-                        Toast.makeText(requireContext(), getString(R.string.tasks_ongoing), Toast.LENGTH_SHORT).show();
-                        //使用AsyncTask在后台线程中执行文件复制
-                        new CopyFile().execute(result);
-                    }
-                }
-        );
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        String value = (String) ExtraCore.consumeValue(ExtraConstants.FILE_SELECTOR);
+        if(value != null){
+            Uri uri = Uri.fromFile(getGameDirPath(value));
+            new CopyFile().execute(uri);
+        }
+
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -105,7 +112,13 @@ public class FilesFragment extends Fragment {
         });
 
         mReturnButton.setOnClickListener(v -> requireActivity().onBackPressed());
-        mAddFileButton.setOnClickListener(v -> openDocumentLauncher.launch(null)); //不限制文件类型
+        mAddFileButton.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putString(BUNDLE_DEFAULT_PATH, DEFAULT_PREF.getString("dirDefaultPath", PojavZHTools.DIR_EXTERNAL_STORAGE_PATH));
+
+            Tools.swapFragment(requireActivity(), SelectFileFragment.class, SelectFileFragment.TAG, true, bundle);
+        });
+
         mCreateFolderButton.setOnClickListener(v -> {
             EditText editText = new EditText(getContext());
             new AlertDialog.Builder(getContext())

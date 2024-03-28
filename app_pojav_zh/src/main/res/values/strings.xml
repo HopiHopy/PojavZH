@@ -45,6 +45,8 @@
     <string name="zh_file_refresh">Refresh</string>
     <string name="zh_file_share">Share</string>
     <string name="zh_file_share_message">Are you sure you want to share this file?</string>
+    <string name="zh_file_select_file_tip">Select File</string>
+    <string name="zh_file_select_file_message">Are you sure you want to select this file?</string>
     <string name="zh_file_open">Open</string>
     <string name="zh_neoforge_dl_searching">Searching for NeoForge version number</string>
     <string name="zh_neoforge_dl_no_installer">Sorry, but this version of NeoForge does not have an installer, which is not yet supported.</string>

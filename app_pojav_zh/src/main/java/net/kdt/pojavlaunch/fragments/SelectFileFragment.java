@@ -40,6 +40,8 @@ public class SelectFileFragment extends Fragment {
         bindViews(view);
         parseBundle();
 
+        mFileListView.setShowFiles(true);
+        mFileListView.setShowFolders(true);
         mFileListView.lockPathAt(new File(mDefaultPath));
         mFileListView.setDialogTitleListener((title) -> mFilePathView.setText(removeLockPath(title)));
         mFileListView.refreshPath();
